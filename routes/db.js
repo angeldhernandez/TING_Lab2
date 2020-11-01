@@ -14,6 +14,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('db', { title: 'Base de Datos',
 												title1: 'Lab 2' });
+});
 
 router.get('/', async (req, res) => {
     try {
