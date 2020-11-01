@@ -25,9 +25,5 @@ router.get('/', async (req, res) => {
     }
   })
 	
-	router.get('/', function(req, res, next) {
-  res.render('db', { title: 'Ruta 1',
-												title1: 'Test de rutas' });
-});
 module.exports = router;
 
