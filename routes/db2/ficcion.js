@@ -1,4 +1,4 @@
-const { Pool } = require('pg');
+﻿const { Pool } = require('pg');
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
@@ -15,7 +15,7 @@ var router = express.Router();
 router.get('/db2/ficcion', async (req, res) => {
     try {
       const client = await pool.connect();
-      const result = await client.query('SELECT * FROM test_table2');
+      const result = await client.query('SELECT * FROM test_table2 WHERE genre LIKE \'Ficción\'');
       const results = { 'results': (result) ? result.rows : null};
       res.render('db2', results );
       client.release();
