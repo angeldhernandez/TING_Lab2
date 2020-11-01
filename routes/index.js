@@ -1,4 +1,4 @@
-var express = require('express');
+﻿var express = require('express');
 var router = express.Router();
 
 const { Pool } = require('pg');
@@ -44,7 +44,7 @@ router.get('/db2', async (req, res) => {
 	router.get('/db2/accion', async (req, res) => {
     try {
       const client = await pool.connect();
-      const result = await client.query('SELECT * FROM test_table2 WHERE genre LIKE \'Acción\'');
+      const result = await client.query('SELECT * FROM test_table2 WHERE genre LIKE \'Acci¢n\'');
       const results = { 'results': (result) ? result.rows : null};
       res.render('db2', results );
       client.release();
@@ -70,7 +70,7 @@ router.get('/db2/drama', async (req, res) => {
 router.get('/db2/ficcion', async (req, res) => {
     try {
       const client = await pool.connect();
-      const result = await client.query('SELECT * FROM test_table2 WHERE genre LIKE \'Ciencia Ficción\'');
+      const result = await client.query('SELECT * FROM test_table2 WHERE genre LIKE \'Ciencia Ficci¢n\'');
       const results = { 'results': (result) ? result.rows : null};
       res.render('db2', results );
       client.release();
