@@ -12,7 +12,7 @@ var router = express.Router();
 /* GET home page. */
 
 
-router.get('/', async (req, res) => {
+router.get('/db2/accion', async (req, res) => {
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM test_table2 WHERE genre LIKE \'Acción\'');
