@@ -10,10 +10,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('db', { title: 'Ruta 1',
-												title1: 'Test de rutas' });
-});
+
 
 router.get('/', async (req, res) => {
     try {
@@ -27,5 +24,10 @@ router.get('/', async (req, res) => {
       res.send("Error " + err);
     }
   })
+	
+	router.get('/', function(req, res, next) {
+  res.render('db', { title: 'Ruta 1',
+												title1: 'Test de rutas' });
+});
 module.exports = router;
 
