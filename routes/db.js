@@ -10,10 +10,9 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-
 router.get('/', function(req, res, next) {
   res.render('db', { title: 'Base de Datos',
-												title1: 'Lab 2' });
+										title1: 'Lab 2' });
 });
 
 router.get('/', async (req, res) => {
