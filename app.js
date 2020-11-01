@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 
 // adhernandez 20/10/20
 var ruta_1Router = require('./routes/ruta_1');
+var dbRouter = requiere('./routes/db');
+
 
 var app = express();
 
@@ -24,9 +26,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-//adhernandez 20/10/20
 app.use('/ruta_1', ruta_1Router);
+app.use('/db', dbRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
