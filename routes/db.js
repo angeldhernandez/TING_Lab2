@@ -10,10 +10,6 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('db', { title: 'Base de Datos',
-										title1: 'Lab 2' });
-});
 
 router.get('/', async (req, res) => {
     try {
@@ -21,6 +17,8 @@ router.get('/', async (req, res) => {
       const result = await client.query('SELECT * FROM test_table');
       const results = { 'results': (result) ? result.rows : null};
       res.render('db', results );
+			res.render('db', { title: 'TING',
+												title1: 'Lab 2' });
       client.release();
     } catch (err) {
       console.error(err);
