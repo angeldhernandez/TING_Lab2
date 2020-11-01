@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 // adhernandez 20/10/20
 var serviciosRouter = require('./routes/servicios');
 var dbRouter = require('./routes/db');
+var db2Router = require('./routes/db2');
 
 
 var app = express();
@@ -28,6 +29,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/servicios', serviciosRouter);
 app.use('/db', dbRouter);
+app.use('/db2', db2Router);
 
 
 
