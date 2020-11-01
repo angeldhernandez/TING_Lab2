@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 
 // adhernandez 20/10/20
 var serviciosRouter = require('./routes/servicios');
-var dbRouter = requiere('./routes/db');
+var dbRouter = require('./routes/db');
 
 
 var app = express();
