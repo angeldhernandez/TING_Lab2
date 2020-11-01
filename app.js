@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 // adhernandez 20/10/20
-var ruta_1Router = require('./routes/ruta_1');
+var serviciosRouter = require('./routes/servicios');
 var dbRouter = requiere('./routes/db');
 
 
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/ruta_1', ruta_1Router);
+app.use('/servicios', serviciosRouter);
 app.use('/db', dbRouter);
 
 
