@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
   </head>
   <body>
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -18,12 +17,13 @@
 				</li>
 			</ul>
 		</div>
-		<h2>Database Results</h2>
-		<ul>
-			<%results.forEach(r { %>
-				<li><%= r.id %> - <%= r.name %> </li>
-			<% }); %>
-		</ul>
+		<div class="container">
+			<h2>Database Results</h2>
+			<ul>
+				<%results.forEach(r { %>
+					<li><%= r.id %> - <%= r.name %> </li>
+				<% }); %>
+			</ul>
 		</div>
   </body>
 </html>
