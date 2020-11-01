@@ -11,6 +11,9 @@ var usersRouter = require('./routes/users');
 var serviciosRouter = require('./routes/servicios');
 var dbRouter = require('./routes/db');
 var db2Router = require('./routes/db2');
+var accionRouter = require('./routes/db2/accion');
+var dramaRouter = require('./routes/db2/drama');
+var ficcionRouter = require('./routes/db2/ficcion');
 
 
 var app = express();
@@ -30,6 +33,9 @@ app.use('/users', usersRouter);
 app.use('/servicios', serviciosRouter);
 app.use('/db', dbRouter);
 app.use('/db2', db2Router);
+app.use('/db2/accion', accionRouter);
+app.use('/db2/drama', dramaRouter);
+app.use('/db2/ficcion', ficcionRouter);
 
 
 

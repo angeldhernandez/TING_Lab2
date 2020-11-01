@@ -41,10 +41,36 @@ router.get('/db2', async (req, res) => {
     }
   })
 	
-	router.get('/db2/action', async (req, res) => {
+	router.get('/db2/accion', async (req, res) => {
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM test_table2 WHERE genre LIKE \'Acción\'');
+      const results = { 'results': (result) ? result.rows : null};
+      res.render('db2', results );
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.send("Error " + err);
+    }
+  })
+	
+router.get('/db2/drama', async (req, res) => {
+    try {
+      const client = await pool.connect();
+      const result = await client.query('SELECT * FROM test_table2 WHERE genre LIKE \'Drama\'');
+      const results = { 'results': (result) ? result.rows : null};
+      res.render('db2', results );
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.send("Error " + err);
+    }
+  })
+	
+router.get('/db2/ficcion', async (req, res) => {
+    try {
+      const client = await pool.connect();
+      const result = await client.query('SELECT * FROM test_table2 WHERE genre LIKE \'Ciencia Ficción\'');
       const results = { 'results': (result) ? result.rows : null};
       res.render('db2', results );
       client.release();
