@@ -7,4 +7,6 @@ router.get('/', function(req, res, next) {
 												title1: 'Lab 2' });
 });
 
+
+
 module.exports = router;

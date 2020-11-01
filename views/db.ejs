@@ -18,7 +18,11 @@
 				</li>
 			</ul>
 		</div>
-    <h1><%= title %></h1>
-    <p><%= title1 %></p>
+    <h2>Database Results</h2>
+    <ul>
+			<%results.forEach(function(r) {} %>
+				<li><%= r.id %> - <%= r.name %> </li>
+			<% }); %>
+		</ul>
   </body>
 </html>
