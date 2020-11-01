@@ -15,7 +15,6 @@ router.get('/', function(req, res, next) {
 												title1: 'Test de rutas' });
 });
 
-
 router.get('/', async (req, res) => {
     try {
       const client = await pool.connect();
